@@ -1,12 +1,11 @@
-from prefect import flow, task, get_run_logger, run_configs
-from prefect.run_configs import ECSRun
+from prefect import flow, task, get_run_logger
 
 @task
 def helloworld():
     return("Hello from Prefect.")
 
 
-@flow(name="Hello World", run_config=ECSRun(cpu="2 vcpu", memory="4 GB"))
+@flow(name="Hello World")
 def runner():
     logger = get_run_logger()
     logger.info(helloworld())
