@@ -1,4 +1,4 @@
-import dask
+#import dask
 from prefect import flow, task, get_run_logger
 from prefect_dask.task_runners import DaskTaskRunner
 
