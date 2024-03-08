@@ -1,4 +1,4 @@
-from prefect import flow, task, get_run_logger
+from prefect import flow, task, get_run_logger, run_configs
 from prefect.run_configs import ECSRun
 
 @task
